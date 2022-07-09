@@ -1,0 +1,20 @@
+<html>
+<body>
+<table cellspacing="0">
+<tr>
+<th>Number
+<th>Squares
+<th>Cubes
+</tr>
+<?php
+$Num=1;
+while(Num<=10)
+{
+echo "<tr><td>";
+echo $Num;
+echo "</tr>";
+}
+?>
+</table>
+<body>
+</html>

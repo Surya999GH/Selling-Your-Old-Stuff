@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register USER'S Bazar</title>
+    </head>
+    <body>
+        <header style="color: red;text-align: left;"><h1>WELCOME</h1></header>
+        <style>
+            body {
+              background-image:url('https://assets-news.housing.com/news/wp-content/uploads/2020/06/10201220/Frequently-asked-questions-on-property-registration-in-India-FB-1200x700-compressed.jpg');
+              background-attachment: fixed;
+              background-size: cover;
+              text-align: left;
+            }
+            label{
+                display: inline-block;
+                color: black;
+                text-align: left;
+                
+            }
+            a:link{
+                text-decoration: none;
+                color: white;
+            }
+            a:hover{
+                text-decoration: underline;
+                color: white;
+            }
+            button{
+                width: 90px;
+            }
+            header{
+                font-size: x-large;
+            }
+            div{
+                width: 370px;
+                display: inline-block;
+                text-align: left;
+            }
+        </style>
+        <center>
+            <br><br><br><br><br><br>
+            <fieldset style="height: 360px;width: 400px; background-color: rgb(213, 219, 157);">
+                <br>
+                <br>
+                <form method="POST" action="http://localhost:3886/Surendra/Register.jsp">
+                  <label for="fname" style="width: 200px;">Firstname</label>
+                  <input type="text" id="fname" name="fname" required>
+                  <br><br>
+                  <label for="lname" style="width: 200px;">Lastname</label>
+                  <input type="text" id="lname" name="lname" required>
+                  <br><br>
+                  
+                    <div>
+                        <label for="gender" style=" width: 200px;">Gender</label><br>
+                        <input type="radio" id="male" name="gender" value="m">
+                        <label for="male" >Male</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="f">
+                        <label for="female" >Female</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="other" name="gender" value="o">
+                        <label for="others" >Others</label>
+                        </div>
+                        <br><br>
+                  <label for="email" style="width: 200px;">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                  <br><br>
+                  <label for="pwd" style="width: 200px;">Password:</label>
+                  <input type="password" id="pwd" name="pwd" required>
+                  <br><br>
+                  <!-- <label for="cfpwd" style="width: 200px;">Confirm Password:</label>
+                  <input type="password" id="cfpwd" name="cfpwd" required> -->
+                  <a href="http://localhost:3886/Surendra/Login.html"><button style="background-color: rgb(92, 46, 219);" type="submit" name>REGISTER</button></a>
+                  <p>Already exists an account!<a href="Login.html">Login</a></p>
+                </form>
+                
+                </fieldset>
+        </center>
+    </body>
+</html>

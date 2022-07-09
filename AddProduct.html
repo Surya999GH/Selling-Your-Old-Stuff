@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Clothings</title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+a{
+  size: 20px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+label{
+ display: inline-block;  
+ color: black;
+ text-align: left;
+ width: 200px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+    <header><h1 style="color: blue;">ANTIQUE BAZAR</h1></header>
+
+<div class="navbar">
+  <a href="UserHome.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="http://localhost:3886/Surendra/AddProduct.jsp">Add Product</a>
+        <a href="http://localhost:3886/Surendra/DeleteProduct.jsp">Delete Product</a>
+    </div>
+  </div> 
+  <!-- <a href="UserCart.html">Cart</a>
+  <a href="UserPayments.html">Payments</a>
+  <a href="About.html">About</a> -->
+  <a href="AdminLogout.jsp">AdminLogout</a>
+</div>
+<div style="height: auto;width: 100%;float: left;"><section style="float: left;background-color: aqua;height: 400px;width: 25%;text-align: center;">
+   <br><br><br><br><br><br><br>
+  <h1>Add Product</h1>
+</section>
+<form method="POST" action="http://localhost:3886/Surendra/AddProducts.jsp">
+<div style="text-align: left;width: 450px;height: auto;margin: 0 auto;">
+   <br><br><br><br><br> 
+  <label for="ItemName">Item Name:</label>
+    <input  name="ItemName" id="ItemName" required>
+    <br><br>
+    <label for="ItemImage">Enter Image Path:</label>
+    <input type="url" id="ItemImage" name="ItemImage" required>
+    <br><br>
+    <label for="YOP">Year Of Purchase:</label>
+    <input type="number" name="YOP" id="YOP" max="2021" required>
+    <br><br>
+    <label for="Address">Address:</label>
+    <br>
+    <input name="Address" id="Address" style="width: 360px;" required>
+    <br><br>
+    <label for="Category">Category:</label>
+    <select name="Category" id="Category" style="width: 160px;" required>
+      <option value="Others">others</option>
+      <option value="Clothings">Clothings</option>
+      <option value="Vehicles">Vehicles</option>
+      <option value="Digitals">Digitals</option>
+      <option value="KitchenWare">KitchenWare</option>
+      <option value="HouseHolds">HouseHolds</option>
+      
+    </select>
+    <br><br>
+    <label for="Price">Price in rupees:</label>
+    <input name="Price" id="Price" type="number" required>
+    <br><br>
+    <button type="submit" style="background-color: darkolivegreen; color:rgb(105, 220, 228);">Add Product</button>
+</div>
+</form>
+</div>
+</body></html>
